@@ -1,0 +1,6 @@
+- name: Ping Module play book
+  hosts: web
+  tasks:
+  - name: ping module
+    ansible.builtin.ping:
+     
