@@ -1,0 +1,9 @@
+- name : variable
+  hosts: web
+  vars:
+    NAME: "MOKA"
+    LEARN: "DEVOPS"
+  tasks:
+  - name: printing info
+    ansible.builtin.debug:
+      msg: "Hi my name is {{Name}} and i am learning {{LEARN}}"
