@@ -1,4 +1,4 @@
-- name: install and run nginx
+- name: Uninstalling nginx Playbook
   hosts: web
   tasks:
   - name: uninstall nginx
