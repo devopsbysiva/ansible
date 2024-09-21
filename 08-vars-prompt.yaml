@@ -1,0 +1,13 @@
+- name: variables from prompt
+  hosts: web
+  vars_prompt:
+  - name: NAME #variable name
+    prompt: please enter your name #requesting user to provide values after running.
+    private: false #this will enable to see the info we provide.
+  - name: COURSE 
+    prompt: please enter the Course name
+    private: false
+  tasks:
+  - name: printing info from prompt
+    ansible.builtin.debug:
+      msg: "Hi i am {{NAME}}, I am Learning {{COURSE}}"
