@@ -1,3 +1,2 @@
-vars:
-  NAME: "MOKA"
-  COURSE: "DEVOPS"
+NAME: "MOKA"
+COURSE: "DEVOPS"
