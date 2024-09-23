@@ -1,6 +1,6 @@
 - name: data types from variables
   hosts: local
-  connections: local  # to run in local server.
+  connection: local  # to run in local server.
   vars:
     COURSE: "DEVOPS" #string
     DURATION: 120 #number
