@@ -1,0 +1,18 @@
+- name: installing nginx 
+  hosts: local
+  connection: local
+  tasks:  # install only the os is redhat 
+  # - name: installing nginx in any server
+  #   ansible.builtin.package:
+  #     name: nginx
+  #     state: present
+  - name: installing nginx if os release version is redhat.
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == 'RedHat'
+  - name: installing nginx if os release version is Debian.
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    when: ansible_os_family == 'Debian'
