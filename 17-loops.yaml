@@ -1,6 +1,7 @@
 - name: installing a list of packages.
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: installing package.
     ansible.builtin.package:
