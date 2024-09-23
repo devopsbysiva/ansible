@@ -2,11 +2,11 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: numebers
+  - name: numbers
     prompt: enter the number
     private: false
   tasks:
   - name: print if given number is greater than 20
     ansible.builtin.debug:
       msg: "Given number is greater than 20"
-    when: num | int > 20 #
+    when: numbers > 20 #
