@@ -1,0 +1,23 @@
+- name: Data Types module
+  hosts: local
+  connections: local  # to run in local server.
+  vars:
+    COURSE: "DEVOPS" #string
+    DURATION: 120 #number
+    TOPICS: #list
+    - linux
+    - shell
+    - Ansible
+    - Terraform
+    - AWS
+    LIVE: true #boolean
+    TOOLS: #map/dictinary
+      ci: jenkins
+      cm: ansible
+      cloud: aws
+  tasks:
+  - name: printing above the datatypes
+    ansible.builtin.debug:
+      msg: "Hi i am learning{{COURSE}}, Duration is {{DURATION}} Topics are {{TOPICS}}, With live is also {{LIVE}},
+      Tools learned are {{TOOLS}}"
+      
