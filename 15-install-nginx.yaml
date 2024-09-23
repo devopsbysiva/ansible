@@ -1,6 +1,7 @@
 - name: installing nginx 
   hosts: local
   connection: local
+  become: yes
   tasks:  # install only the os is redhat 
   # - name: installing nginx in any server
   #   ansible.builtin.package:
