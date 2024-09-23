@@ -1,4 +1,4 @@
-- name: Data Types module
+- name: datatypes demo
   hosts: local
   connections: local  # to run in local server.
   vars:
@@ -20,4 +20,4 @@
     ansible.builtin.debug:
       msg: "Hi i am learning{{COURSE}}, Duration is {{DURATION}} Topics are {{TOPICS}}, With live is also {{LIVE}},
       Tools learned are {{TOOLS}}"
-      
+
