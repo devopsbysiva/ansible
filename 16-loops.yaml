@@ -1,0 +1,13 @@
+- name: loops demo
+  hosts: local
+  connection: local
+  tasks:
+  - name: printing the list of members
+    ansible.builtin.debug:
+      mag: " The members ina group are {{item}}"
+    loop:
+    - RAMESH
+    - SURESH
+    - UMESH
+    - GANESH
+
