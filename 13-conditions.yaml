@@ -1,0 +1,11 @@
+- name: creating a user
+  hosts: local #entry is made in inventory under [local] localhost
+  connection: local #for local server connection
+  become: yes #root access
+  tasks:
+  - name: check user exist or not
+    ansible.builtiin.command: id expense
+    register: USER #getting the ouput from above command "id expense" into a varible "USER"
+  - name: printing from USER
+    ansible.builtin.debug:
+      msg: "{{USER}}"
