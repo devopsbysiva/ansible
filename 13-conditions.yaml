@@ -7,6 +7,9 @@
     ansible.builtin.command: id expense
     register: USER #getting the ouput from above command "id expense" into a varible "USER"
     ignore_errors: True
-  - name: printing from USER
-    ansible.builtin.debug:
-      msg: "{{USER}}"
+  # - name: printing from USER
+  #   ansible.builtin.debug:
+  #     msg: "{{USER}}"
+  - name : to create if user not exists
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 # 0 code is for success.if it is not there then we are creating.
