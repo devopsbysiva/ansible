@@ -5,3 +5,8 @@
   - name: default variable.
     ansible.builtin.debug:
       msg: "i am learning {{ cast | default('Ansible') }}"
+  - name: printing unique set from list
+    vars: 
+      number: [1,2,3,4,3,21,1,4,67]
+    ansible.builtin.debug:
+      msg: "unique : {{ number | unique }}"
