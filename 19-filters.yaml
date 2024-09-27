@@ -27,4 +27,4 @@
     vars: 
       number: [1,2,3,4,3,21,1,4,67]
     ansible.builtin.debug:
-      msg: "unique : {{ number | max }}" 
+      msg: "max : {{ number | max }}" 
