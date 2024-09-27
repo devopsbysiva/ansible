@@ -10,3 +10,9 @@
       number: [1,2,3,4,3,21,1,4,67]
     ansible.builtin.debug:
       msg: "unique : {{ number | unique }}"
+  - name: printing udifference of  list
+    vars: 
+      list1: [1,2,3,4,3,21,1,4,67]
+      list2: [2,67,4,3,89]
+    ansible.builtin.debug:
+      msg: "difference of list : {{ list1 | difference(list2) }}"
