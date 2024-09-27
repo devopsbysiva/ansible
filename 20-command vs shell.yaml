@@ -3,6 +3,6 @@
   connection: local
   tasks:
   - name: command
-    ansible.builtin.command: ls -lrt > /tmp/output.txt 
+    ansible.builtin.shell: ls -lrt > /tmp/output.txt 
 
     
