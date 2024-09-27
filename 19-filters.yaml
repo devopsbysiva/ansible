@@ -16,3 +16,8 @@
       list2: [2,67,4,3,89]
     ansible.builtin.debug:
       msg: "difference of list : {{ list1 | difference(list2) }}"
+  - name: printing string in upppercase
+    vars:
+      greetings: " My Name is Ganesh"
+    ansible.builtin.debug:
+      msg: "{{ greetings| upper}}"
