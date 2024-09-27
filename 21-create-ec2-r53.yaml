@@ -13,6 +13,6 @@
       msg: "{{ instances }}"
   - name: trying the list2
     ansible.builtin.debug:
-      msg: "{{ items }}"
+      msg: "{{ item }}"
     loop: "{{ instances }}"
   
