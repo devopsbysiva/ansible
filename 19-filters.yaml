@@ -28,3 +28,10 @@
       number: [1,2,3,4,3,21,1,4,67]
     ansible.builtin.debug:
       msg: "max : {{ number | max }}, min : {{ number | min }}" 
+  - name: convert dictonary to list
+    vars:
+      course:
+        name: "ganesh"
+        age: 24
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items }}"
