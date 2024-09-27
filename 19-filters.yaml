@@ -18,6 +18,8 @@
       msg: "difference of list : {{ list1 | difference(list2) }}"
   - name: printing string in upppercase
     vars:
-      greetings: " My Name is Ganesh"
+      greetings: 
+      - My Name is Ganesh
+      - My Name is Biti
     ansible.builtin.debug:
       msg: "{{ greetings| upper}}"
