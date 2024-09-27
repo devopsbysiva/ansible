@@ -30,8 +30,17 @@
       msg: "max : {{ number | max }}, min : {{ number | min }}" 
   - name: convert dictonary to list
     vars:
-      course:
+      details:
         name: "ganesh"
         age: 24
     ansible.builtin.debug:
-      msg: "{{ course | dict2items }}"
+      msg: "{{ details | dict2items }}"
+
+  - name: items/list to dictionary
+    vars:
+      details:
+        - { "key": "name", "value": "ganesh" }
+        - { "key": "age", "value": 24 }
+    ansible.debug.builtin:
+      msg: "{{ details | items2dict }}"
+     
