@@ -41,6 +41,6 @@
       details:
         - { "key": "name", "value": "ganesh" }
         - { "key": "age", "value": 24 }
-    ansible.debug.builtin:
+    ansible.builtin.debug:
       msg: "{{ details | items2dict }}"
      
