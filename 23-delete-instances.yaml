@@ -5,7 +5,7 @@
   - name: Terminate instances that were previously launched
     amazon.aws.ec2:
       state: 'absent'
-      instance_ids: '{{ item }}'
+      instance_ids: "{{ item }}"
     loop:
     - "i-082280de2c9297565"
     - "i-0434bbeec4a48e077"
