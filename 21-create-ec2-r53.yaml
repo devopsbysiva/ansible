@@ -13,10 +13,11 @@
   - name: creating three ec2 instances.
     amazon.aws.ec2_instance:  #module for aws 
       name: "{{ item }}"
-      vpc_subnet_id: subnet-0613c386eba4dff56 #networks
+      vpc_subnet_id: "subnet-0613c386eba4dff56"  #networks
       instance_type: "t2.micro"
-      security_group: sg-077917637fc069d1f
-      image_id: ami-09c813fb71547fc4f #ami id
+      region: us-east-1
+      security_group: "sg-077917637fc069d1f"
+      image_id: "ami-09c813fb71547fc4f" #ami id
     loop:
     - mysql
     - backend
