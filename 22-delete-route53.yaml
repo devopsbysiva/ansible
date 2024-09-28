@@ -1,7 +1,7 @@
 - name: deleting records from route 53
   hosts: local
   connection: local
-  taskls:
+  tasks:
   - name: deleting  records
     amazon.aws.route53:
       state: absent
