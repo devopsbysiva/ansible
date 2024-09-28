@@ -11,19 +11,18 @@
       executable: pip3.9
 
   - name: creating ec2 instances.
-    amazon.aws.ec2_instance:  #module for aws 
+    amazon.aws.ec2_instance:
       name: "{{ item }}"
-      vpc_subnet_id: "subnet-0613c386eba4dff56"  #networks
-      instance_type: "t2.micro"
-      region: "us-east-1"
+      vpc_subnet_id: "subnet-0613c386eba4dff56"
+      instance_type: "t3.micro"
       security_group: "sg-077917637fc069d1f"
-      image_id: "ami-09c813fb71547fc4f" #ami id
-    loop:
+      image_id: "ami-09c813fb71547fc4f"
+    loop: 
     - mysql
     - backend
     - frontend
     register: ec2_instances
-
+   
   - name: printing the results.
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
