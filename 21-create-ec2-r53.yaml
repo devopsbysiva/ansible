@@ -31,7 +31,7 @@
   - name: creating rout53 records
     amazon.aws.route53:
       state: present
-      zone: devgani.com # domain name
+      zone: devgani.online # domain name
       record: "{{item.item}} .devgani.online" #sub domain name
       type: A
       ttl: 1 #refresh time
