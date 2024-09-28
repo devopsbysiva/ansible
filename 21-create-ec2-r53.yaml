@@ -1,7 +1,15 @@
 - name: creating ec2 and r53 
   hosts: local
   connection: local
+  become: yes
   tasks:
+  - name: installing python dependencies
+    ansible.builtin.pip:
+      name: 
+      - boto3
+      - botocore
+      executable: pip3.9
+
   - name: creating 3 ec2 instances.
     amazon.aws.ec2_instance:  #module for aws 
       name: "{{ item }}"
