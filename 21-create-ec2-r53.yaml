@@ -32,7 +32,7 @@
     amazon.aws.route53:
       state: present
       zone: "devgani.online" # domain name
-      record: "{{item.item}} .devgani.online" #sub domain name
+      record: "{{ item.item }} .devgani.online" #sub domain name
       type: A
       ttl: 1 #refresh time
       value: "{{ item.instances[0].private_ip_address }}"
