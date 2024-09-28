@@ -1,0 +1,17 @@
+- name: deleting records from route 53
+  hosts: local
+  connection: local
+  taskls:
+  - name: deleting  records
+    amazon.aws.route53:
+      state: absent
+      zone: "devgani.online" # domain name
+      record: "{{ item.domain }}" #sub domain name
+      type: A
+      ttl: 1 #refresh time
+      value: "{{ item.records }}"
+    loop:
+    - { "domain": "mysql.devgani.online", "records": "172.31.91.47" }
+    - { "domain": "backend.devgani.online", "records": "172.31.83.102" }
+    - { "domain": "frontend.devgani.online", "records": "172.31.88.198" }
+    - { "domain": "devgani.online", "records": "100.26.203.178" }
