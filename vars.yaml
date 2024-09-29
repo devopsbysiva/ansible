@@ -1,2 +1,8 @@
 NAME: "MOKA"
 COURSE: "DEVOPS"
+#vpc_subnet_id: "subnet-0613c386eba4dff56"
+SUBNET_ID: "subnet-0613c386eba4dff56"
+#security_group: "sg-077917637fc069d1f"
+SECURITY_GROUP: "sg-077917637fc069d1f"
+#image_id: "ami-09c813fb71547fc4f"
+IMAGE_ID: "mi-09c813fb71547fc4f"
