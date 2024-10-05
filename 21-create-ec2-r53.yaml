@@ -25,7 +25,7 @@
       image_id: "{{ IMAGE_ID }}" #variable declared in vars.yaml file
       region: "us-east-1"
     loop: "{{ instances }}"
-    register: ec2_instances
+    register: ec2_instances # output assingd to variable ec2_instances
    
   - name: printing the results.
     ansible.builtin.debug:
