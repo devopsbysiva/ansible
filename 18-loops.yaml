@@ -10,3 +10,4 @@
     loop:
     - {name: 'mysql' , state: 'absent'}
     - {name: 'zip' , state: 'present'}
+
