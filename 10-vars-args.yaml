@@ -1,6 +1,9 @@
 - name: variables from arguments
-  hosts: web
+  hosts: local
+  connection: local
   tasks:
   - name: printing info from arguments
     ansible.builtin.debug:
       msg: "Hi i am {{NAME}}, I am Learning {{COURSE}}"
+
+# ansible-playbook -i inventory.ini 10-vars-args.yaml -e "NAME='MOKAGANESH' COURSE='ANSIBLE ZERO TO HERO'"
