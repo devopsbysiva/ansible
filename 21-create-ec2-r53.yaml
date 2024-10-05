@@ -52,5 +52,6 @@
       ttl: 1 #refresh time
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
+      overwrite: true
     loop: "{{ ec2_instances.results }}"
     when: item.item == "frontend"
