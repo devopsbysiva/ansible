@@ -5,4 +5,5 @@
   - name: command
     ansible.builtin.shell: ls -lrt > /tmp/output.txt 
 
-    
+# for complex commands which include pipleline , writing into a file ect. use shell module.
+# for simpleer commands we use command Module.
